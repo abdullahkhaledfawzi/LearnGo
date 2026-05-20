@@ -154,8 +154,4 @@ func TestMyFunction(t *testing.T) {
 Execute with: `go test`
 */
 
-func main() {
-	timeDemo()
-	mathDemo()
-	randDemo()
-}
+

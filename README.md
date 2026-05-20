@@ -44,16 +44,26 @@ A comprehensive project for Go MCQ exam preparation focusing on:
 - `io`, `os`, `encoding/json`
 - `time`, `math`, `math/rand`
 
-## How to Use
+## How to Use This Repository
 
-Run files for each stage:
+To run the examples in any stage, you **must navigate into that stage's directory** and run the entire package together using `go run .`.
+
+Do NOT run individual files (like `go run 1_variables.go`) because the functions are shared across the package.
+
+**Example Usage:**
 ```bash
-go run stage1_types_and_variables/main.go
-go run stage2_control_flow/main.go
-# And so on...
+# 1. Open your terminal and navigate to the project directory
+cd "D:\go lang"
+
+# 2. Enter a specific stage
+cd stage1_types_and_variables
+
+# 3. Run all files in that stage together
+go run .
 ```
 
-Or run a specific file to focus on a single topic:
-```bash
-go run stage1_types_and_variables/1_variables.go
-```
+After running the code, open the files in your editor and read the detailed English comments to understand the "Why" behind the code.
+
+## Essential Files
+- [**EXAM_NOTES.md**](./EXAM_NOTES.md) - Golden tips, edge cases, and traps. Review this right before the exam.
+- [**SAMPLE_MCQ.md**](./SAMPLE_MCQ.md) - Practice questions with explanations. Test your knowledge.

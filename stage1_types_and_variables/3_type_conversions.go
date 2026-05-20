@@ -115,7 +115,7 @@ func stringConversions() {
 	number := 123
 	// strNumber := string(number) // Allowed, but returns character represented by 123
 	// Correct way to get "123":
-	strNumber2 := strconv.Itoa(123)
+	strNumber2 := strconv.Itoa(number)
 	fmt.Printf("strconv.Itoa(123): %s\n", strNumber2) // "123"
 }
 

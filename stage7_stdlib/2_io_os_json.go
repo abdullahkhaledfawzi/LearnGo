@@ -235,12 +235,4 @@ func jsonTagsDemo() {
 	fmt.Printf("Item unmarshaled: ID=%d, Price=%.2f (Type: %T)\n", item.ID, item.Price, item.Price)
 }
 
-func main() {
-	osDemo()
-	ioDemo()
-	jsonMarshalDemo()
-	jsonUnmarshalDemo()
-	jsonSlicesAndMaps()
-	jsonGeneric()
-	jsonTagsDemo()
-}
+

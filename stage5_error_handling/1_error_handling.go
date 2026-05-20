@@ -73,7 +73,7 @@ func basicErrorHandling() {
 	}
 
 	// 3. Custom error usage
-	res, err3 := process(-5)
+	_, err3 := process(-5)
 	if err3 != nil {
 		fmt.Println("Custom error triggered:", err3)
 	}

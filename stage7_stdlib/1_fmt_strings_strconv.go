@@ -208,8 +208,4 @@ func strconvDemo() {
 	fmt.Printf("ParseBool('true'): %v\n", b)
 }
 
-func main() {
-	fmtDemo()
-	stringsDemo()
-	strconvDemo()
-}
+

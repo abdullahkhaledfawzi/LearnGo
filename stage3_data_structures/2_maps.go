@@ -206,29 +206,31 @@ Maps of Structs
 ===============================================
 */
 
-type Person struct {
+type MapPerson struct {
 	Name string
 	Age  int
 }
 
 func mapWithStructs() {
 	fmt.Println("\n======== Maps with Structs ========")
+	// Key is an ID, Value is a MapPerson struct
+	employees := make(map[int]MapPerson)
 
-	people := make(map[string]Person)
-	people["ahmed"] = Person{"Ahmed", 25}
-	people["fatima"] = Person{Name: "Fatima", Age: 23}
+	// Adding entries
+	employees[101] = MapPerson{Name: "Ahmed", Age: 30}
+	employees[102] = MapPerson{Name: "Fatima", Age: 25}
 
-	for name, person := range people {
-		fmt.Printf("Key '%s': %s is %d years old\n", name, person.Name, person.Age)
+	for id, person := range employees {
+		fmt.Printf("Key '%d': %s is %d years old\n", id, person.Name, person.Age)
 	}
 	
 	// ⚠️ Advanced Gotcha: You cannot modify a struct field directly inside a map!
-	// people["ahmed"].Age = 26 // ❌ Error: cannot assign to struct field people["ahmed"].Age in map
+	// employees[101].Age = 26 // ❌ Error: cannot assign to struct field employees[101].Age in map
 	
 	// Correct way to update a struct in a map:
-	temp := people["ahmed"]
+	temp := employees[101]
 	temp.Age = 26
-	people["ahmed"] = temp // Overwrite the entire struct
+	employees[101] = temp // Overwrite the entire struct
 	
-	// Alternatively, use a map of pointers: `map[string]*Person`
+	// Alternatively, use a map of pointers: `map[int]*MapPerson`
 }
