@@ -52,8 +52,7 @@ Do NOT run individual files (like `go run 1_variables.go`) because the functions
 
 **Example Usage:**
 ```bash
-# 1. Open your terminal and navigate to the project directory
-cd "D:\go lang"
+# 1. Open your terminal and navigate to the project directory (LearnGo)
 
 # 2. Enter a specific stage
 cd stage1_types_and_variables
